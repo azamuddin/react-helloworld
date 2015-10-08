@@ -1,0 +1,74 @@
+<html>
+  <head>
+    <title>Hello World</title>
+    <script src="build/react.js"></script>
+    <script src="build/JSXTransformer.js"></script>
+  </head>
+  <body>
+
+
+  <!-- 1. no JSX - no props-->
+  <!-- <script>
+    // buat blueprint
+    var SalamClass = React.createClass({
+      render: function(){
+        return React.createElement('span', {}, 'Hello World');
+      }
+    });
+
+    // convert blueprint menjadi element
+    var SalamElement = React.createElement(SalamClass);
+
+    // render element ke DOM
+    React.render(SalamElement, document.body)
+  </script> -->
+
+  <!-- 2. no JSX - with props-->
+  <!-- <script>
+    // buat blueprint
+    var SalamClass = React.createClass({
+      displayName: 'Salam',
+      render: function(){
+        return React.createElement('span', null, this.props.text);
+      }
+    });
+
+    // convert blueprint menjadi element
+    var SalamElement = React.createElement(SalamClass, {text: 'Selamat Pagi'});
+
+    // render element ke DOM
+    React.render(SalamElement, document.body);
+  </script> -->
+
+  <!-- 3. Let's us JSX -->
+  <script type="text/jsx">
+    // buat blueprint
+    var Salam = React.createClass({
+      render: function(){
+        return <span>{this.props.text} <b>{this.props.to}</b></span>;
+      }
+    });
+
+    // render
+    React.render(<Salam text="Selamat Pagi" to="Azam"/>, document.body);
+  </script>
+
+  <!-- Bayangkan kita bisa membuat custom component untuk apps kita -->
+  <!-- Kita juga bisa share custom component tersebut ke team kita -->
+  <!-- Dan kita bisa memanfaatkan custom element yang telah dibuat oleh orang lain -->
+  <!-- Contoh -->
+  <!--
+      react google map
+      react pie chart
+      react table
+      react datagrid
+      dll.. endless
+   -->
+
+
+  <!-- 4. Working with browserify -->
+  
+
+
+  </body>
+</html>
